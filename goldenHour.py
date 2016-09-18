@@ -28,5 +28,6 @@ reminder = goldenhr - datetime.timedelta(minutes=30)
 now = datetime.datetime.today()
 delta = (reminder-now).seconds+1
 
+#would normally be delta, but for the purpose of demoing will be left at intervals of 10 seconds
 timer = Timer(10, sendReminder)
 timer.start()
