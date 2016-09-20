@@ -16,13 +16,29 @@ Files Included in this Folder
 All files are left within the same directory/repository and therefore one README file.
 This is so that no matter what script is being run, you'll always cd into the same directory.
 
+
 1. costCalculator.py
 --------------------
 
 Originally started to help my friend calculate how much he would need to purchase "X"
 number of Boneless Wings from Buffalo Wild Wings on their 65 cent per wing deals. 
 
+
 2. goldenHour.py
 ----------------
 
 Originally started at the Hack the North 2016 hackathon (hosted by University of Waterloo). 
+Intended for OS X only at the moment.
+
+Utilizes the Yahoo Weather API to get the sunset times for a specific location.
+Sends a reminder to OS X's Notification Center an hour before sunset to remind photographers to take a photo of the sunset. 
+
+Parameters:
+	"<city, state>"
+	Example: "West Lafayette, IN"
+
+Dependencies:
+	terminal-notifier (OS X)
+
+To install:
+	$ sudo gem install terminal-notifier
