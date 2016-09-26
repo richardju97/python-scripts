@@ -23,6 +23,8 @@ This is so that no matter what script is being run, you'll always cd into the sa
 Originally started to help my friend calculate how much he would need to purchase "X"
 number of Boneless Wings from Buffalo Wild Wings on their 65 cent per wing deals. 
 
+Expansion Plans:
+	1. Modify so that it's more modular so that it calculates various different costs based on user input/selection
 
 2. goldenHour.py
 ----------------
@@ -42,3 +44,8 @@ Dependencies:
 
 To install:
 	$ sudo gem install terminal-notifier
+	
+Expansion Plans:
+	1. Modify to run as a background task that repeats daily
+	2. Calculate actual "golden hour" times instead of approximating at 30 minutes
+	3. Assess the script's footprint and determine if there are ways to minimize it
