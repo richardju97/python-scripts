@@ -12,6 +12,7 @@ Files Included in this Folder
 
 1. costCalculator.py
 2. goldenHour.py
+3. cvp.py
 
 All files are left within the same directory/repository and therefore one README file.
 This is so that no matter what script is being run, you'll always cd into the same directory.
@@ -49,3 +50,10 @@ Expansion Plans:
 	1. Modify to run as a background task that repeats daily
 	2. Calculate actual "golden hour" times instead of approximating at 30 minutes
 	3. Assess the script's footprint and determine if there are ways to minimize it
+
+3. cvp.py
+---------
+
+Basic Break Even Point Calculator using the CVP formula from Managerial Accounting.
+
+Prompts user for inputting the Unit selling price, unit variable cost, and total fixed cost, then returns the number of units needed to be sold in order to break even (Net Income = 0).  
