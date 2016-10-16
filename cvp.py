@@ -4,7 +4,8 @@
 
 cvpoption_string = "Please select which of the following you want to calculate.\n"
 cvpoption_string += "1. Break Even Point (in terms of units).\n"
-cvpoption_string += "2. Units needed to reach target net income.\n"
+cvpoption_string += "2. Units needed to reach target net income before taxes.\n"
+cvpoption_string += "3. Units needed to reach target net income after taxes.\n"
 
 option = input(cvpoption_string)
 
@@ -17,8 +18,15 @@ if (option == 1):
 	print "You need to sell " + str(units) + " units in order to break even."
 
 elif (option == 2):
-	targetNI = input("Enter Target Net Income: ")
+	targetNI = input("Enter Target Net Income before taxes: ")
 	units = (targetNI + fixed) / (sellingPrice - var)
-	print "You need to sell " + str(units) + " units in order to earn a net income of " + str(targetNI) + "."
+	print "You need to sell " + str(units) + " units in order to earn a net income of " + str(targetNI) + " before taxes."
 
+elif (option == 3):
+	targetNI = input("Enter Target Net Income after taxes: ")
+	taxRate = input("Enter Income Tax Rate in decimal form (e.g. 40% would be entered as 0.4): ")
+	targetNIAT = targetNI / (1 - taxRate)
+	units = (targetNIAT + fixed) / (sellingPrice - var)
+	print "You need to sell " +str(units) + " units in order to earn a net income of " + str(targetNI) + " after taxes."
+		
 # Note that this is currently truncating instead of rounding up
