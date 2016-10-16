@@ -54,6 +54,14 @@ Expansion Plans:
 3. cvp.py
 ---------
 
-Basic Break Even Point Calculator using the CVP formula from Managerial Accounting.
+Calculates the nnumber of units needed to achieve a certain target net income (either before or after taxes) using the CVP formula from Managerial Accounting.
 
-Prompts user for inputting the Unit selling price, unit variable cost, and total fixed cost, then returns the number of units needed to be sold in order to break even (Net Income = 0).  
+Prompts users to select 1 or 3 options: Break Even (net income = 0), Target Net Income Before Taxes, and Target Net Income After Taxes. 
+
+Then prompts users to input the following variables where applicable:
+	Unit Selling Price
+  	Unit Variable Cost
+	Total Fixed Cost
+	Target Net Income Before/After Taxes
+	Income Tax Rate
+
