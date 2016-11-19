@@ -51,6 +51,8 @@ Expansion Plans:
 	2. Calculate actual "golden hour" times instead of approximating at 30 minutes
 	3. Assess the script's footprint and determine if there are ways to minimize it
 
+	Alternative: Adjust to be deployed as a Chrome Extension
+
 3. cvp.py
 ---------
 
