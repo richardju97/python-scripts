@@ -1,5 +1,5 @@
 
-# Basic Break Even Point Calculator based the CVP Formula
+# Offers various options for calculating the number of units required to achieve a certain target net income
 # Requires user input for the Selling Price per Unit, Unit Variable Cost, and Total Fixed Cost
 
 cvpoption_string = "Please select which of the following you want to calculate.\n"
@@ -29,4 +29,7 @@ elif (option == 3):
 	units = (targetNIAT + fixed) / (sellingPrice - var)
 	print "You need to sell " +str(units) + " units in order to earn a net income of " + str(targetNI) + " after taxes."
 		
-# Note that this is currently truncating instead of rounding up
+else:
+	print "Error: Invalid Input"
+		
+# Note that this is currently appears to be truncating instead of rounding up

@@ -50,7 +50,7 @@ Expansion Plans:
 	1. Modify to run as a background task that repeats daily
 	2. Calculate actual "golden hour" times instead of approximating at 30 minutes
 	3. Assess the script's footprint and determine if there are ways to minimize it
-
+	4. Integrate Twilio API to send SMS messages to mobile phones for a more effective reminder system.
 	Alternative: Adjust to be deployed as a Chrome Extension
 
 3. cvp.py

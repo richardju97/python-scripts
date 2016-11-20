@@ -15,8 +15,9 @@ def addItem():
 	cart.append(Item(numWings, "Wings", 0.65))
 
 def calcTotalCosts():
+	tcost = 0
 	for i in range(cart.length):
-		
+		tcost += (cart[i].quantity * cart[i].cost)
 
 #input("Please select an option: 1. Add Item 2. Set Tax Rate")
 
