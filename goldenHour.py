@@ -6,7 +6,14 @@ from threading import Timer
 #Twilio integration for sending SMS
 from twilio.rest import TwilioRestClient
 
+# Find these values at https://twilio.com/user/account
+# Make sure to remove these before pushing to GitHub
+account_sid = "Account SID"
+auth_token = "Auth Token"
+client = TwilioRestClient(account_sid, auth_token)
+
 loc = str(sys.argv[1])
+phoneNo = str(sys.argv[2])
 
 def checkWeather():
 	baseurl = "https://query.yahooapis.com/v1/public/yql?"
@@ -22,14 +29,9 @@ def sendReminder():
 	os.system('terminal-notifier {}'.format(' '.join([m, t])))
 
 def sendSMS():
-	# Find these values at https://twilio.com/user/account
-	account_sid = ""
-	auth_token = ""
-	client = TwilioRestClient(account_sid, auth_token)
-	
 	msg = "Reminder that sunset is at " + str(sunset) + " today."
 
-	message = client.messages.create(to="yourPhoneNumber", from_="TwilioAPIPhoneNumber", body=msg)
+	message = client.messages.create(to=phoneNo, from_="Twilio API Number", body=msg)
 
 sunset = checkWeather()
 currDate = str(time.localtime()[0]) + ' ' + str(time.localtime()[1]) + ' ' + str(time.localtime()[2])
