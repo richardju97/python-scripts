@@ -23,13 +23,13 @@ def sendReminder():
 
 def sendSMS():
 	# Find these values at https://twilio.com/user/account
-	account_sid = "AC93bc79a222d23f5e7e09308591e8bec2"
-	auth_token = "ceef4b2d00ddca1ddc4b73ede5bc4539"
+	account_sid = ""
+	auth_token = ""
 	client = TwilioRestClient(account_sid, auth_token)
 	
 	msg = "Reminder that sunset is at " + str(sunset) + " today."
 
-	message = client.messages.create(to="+14088934962", from_="+14083421269", body=msg)
+	message = client.messages.create(to="yourPhoneNumber", from_="TwilioAPIPhoneNumber", body=msg)
 
 sunset = checkWeather()
 currDate = str(time.localtime()[0]) + ' ' + str(time.localtime()[1]) + ' ' + str(time.localtime()[2])
