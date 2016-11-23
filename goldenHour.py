@@ -3,6 +3,9 @@ import os, time
 import datetime
 from threading import Timer
 
+#Twilio integration for sending SMS
+from twilio.rest import TwilioRestClient
+
 loc = str(sys.argv[1])
 
 def checkWeather():
@@ -18,6 +21,16 @@ def sendReminder():
 	m = '-message {!r}'.format("Reminder that sunset is at " + str(sunset) + " today.")
 	os.system('terminal-notifier {}'.format(' '.join([m, t])))
 
+def sendSMS():
+	# Find these values at https://twilio.com/user/account
+	account_sid = "AC93bc79a222d23f5e7e09308591e8bec2"
+	auth_token = "ceef4b2d00ddca1ddc4b73ede5bc4539"
+	client = TwilioRestClient(account_sid, auth_token)
+	
+	msg = "Reminder that sunset is at " + str(sunset) + " today."
+
+	message = client.messages.create(to="+14088934962", from_="+14083421269", body=msg)
+
 sunset = checkWeather()
 currDate = str(time.localtime()[0]) + ' ' + str(time.localtime()[1]) + ' ' + str(time.localtime()[2])
 
@@ -30,4 +43,7 @@ delta = (reminder-now).seconds+1
 
 #would normally be delta, but for the purpose of demoing will be left at intervals of 10 seconds
 timer = Timer(10, sendReminder)
+timer.start()
+
+timer = Timer(10, sendSMS)
 timer.start()
