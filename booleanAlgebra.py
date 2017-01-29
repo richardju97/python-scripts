@@ -2,7 +2,7 @@
 # Various Calculations related to Boolean Algebra
 # Based on CS 25000 "Computer Architecture" Course at Purdue University
 
-numInputs = 2
+numInputs = input("Number of Inputs desired: ")
 numCol = numInputs + 1
 numRows = 2**numInputs
 
@@ -37,9 +37,4 @@ for k in range(numRows):
 		elif (binaryArray[m] == 1 and m != 0):
 			binaryArray[m] = 0
 			
-
-# print "|  0  |  0  |  0  |"
-# print "|  0  |  1  |  0  |"
-# print "|  1  |  0  |  0  |"
-# print "|  1  |  1  |  1  |"
 print rowDivider
