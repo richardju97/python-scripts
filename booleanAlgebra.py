@@ -4,23 +4,42 @@
 
 numInputs = 2
 numCol = numInputs + 1
+numRows = 2**numInputs
 
 rowDivider = "-"
 for i in range((numCol*6)):
 	rowDivider += "-"
 	
-row = "|"
+rowHeader = "|"
 input = "A"
+binaryArray = []
 for j in range(numInputs):
-	row += "  " + chr(ord(input)+j) + "  |"
+	rowHeader += "  " + chr(ord(input)+j) + "  |"
+	binaryArray.append(0)
 
-row += "  Q  |"
-	
+rowHeader += "  Q  |"
+binaryArray.append('x')
+
 print rowDivider
-print row
+print rowHeader
 print rowDivider
-print "|  0  |  0  |  0  |"
-print "|  0  |  1  |  0  |"
-print "|  1  |  0  |  0  |"
-print "|  1  |  1  |  1  |"
+
+for k in range(numRows):
+	row = "|"
+	for l in range(numCol):
+		row += "  " + str(binaryArray[l]) + "  |"
+	print row
+
+	for m in range(numCol-2, -1, -1):
+		if (binaryArray[m] == 0):
+			binaryArray[m] = 1
+			break
+		elif (binaryArray[m] == 1 and m != 0):
+			binaryArray[m] = 0
+			
+
+# print "|  0  |  0  |  0  |"
+# print "|  0  |  1  |  0  |"
+# print "|  1  |  0  |  0  |"
+# print "|  1  |  1  |  1  |"
 print rowDivider
