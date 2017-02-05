@@ -7,6 +7,18 @@ import math
 #Gravitational Acceleration on Earth, in meters per second
 g = 9.8
 
+# Given initial horizontal velocity and 0 vertical velocity
+# Calculate how far the object will drop after traveling a certain distance
+
+Vx = input("Horizontal Velocity: ")
+distance = input("Distance: ")
+
+time = distance / Vx
+print "Time taken to reach given distance = " + str(time) + " seconds"
+
+fallDistance = time*time * g / 2
+print "Distance fallen = " + str(fallDistance) + " meters"
+
 # Vector Components
 # Given a Vector's magnitude and angle with the X-axis, find their X and Y components
 # vectorMag = input("Vector Magnitude: ")
