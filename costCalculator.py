@@ -61,12 +61,6 @@ elif (mode == 2):
 		else:	
 			print "Please enter a valid input: "
 		selection = input(options)
-		
-	# print "Tax = " + str(tax) + "%"
-# 	print "Number of Wings ordered: " + str(cart[0].quantity)
-# 	cost = cart[0].quantity * cart[0].cost * ((tax / 100.0) + 1)
-# 	
-# 	print "Total cost: $" + str(round(cost, 2))
 
 else:
 	print "Please select a valid mode."

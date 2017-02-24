@@ -41,3 +41,6 @@ else:
 	print "Verb is neither"
 	
 # print masuForm + masu.decode("utf-8")
+
+
+# Other forms still needed: Volitional, Te-Form, Ta-Form?, Negative, Potential

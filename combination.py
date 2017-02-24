@@ -35,4 +35,4 @@ def C(n, r):
 # 
 # print nCr
 
-print C(6, 4)
+# print C(6, 4)

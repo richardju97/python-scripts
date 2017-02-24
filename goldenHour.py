@@ -8,8 +8,8 @@ from twilio.rest import TwilioRestClient
 
 # Find these values at https://twilio.com/user/account
 # Make sure to remove these before pushing to GitHub
-account_sid = "Account SID"
-auth_token = "Auth Token"
+account_sid = "AC93bc79a222d23f5e7e09308591e8bec2"
+auth_token = "ceef4b2d00ddca1ddc4b73ede5bc4539"
 client = TwilioRestClient(account_sid, auth_token)
 
 loc = str(sys.argv[1])
@@ -31,7 +31,7 @@ def sendReminder():
 def sendSMS():
 	msg = "Reminder that sunset is at " + str(sunset) + " today."
 
-	message = client.messages.create(to=phoneNo, from_="Twilio API Number", body=msg)
+	message = client.messages.create(to=phoneNo, from_="+14083421269", body=msg)
 
 sunset = checkWeather()
 currDate = str(time.localtime()[0]) + ' ' + str(time.localtime()[1]) + ' ' + str(time.localtime()[2])

@@ -1,12 +1,12 @@
 # Given two parent binary strings, computes an offspring binary string based on the selected genetic algorithm
+# http://www.obitko.com/tutorials/genetic-algorithms/crossover-mutation.php
 
 import random
 
 # Single Point Cross Over
 def singleXOver(parent1, parent2, n):
 	if (len(parent1) > n):
-		return parent1[:n] + parent2[n:]
-		
+		return parent1[:n] + parent2[n:]	
 
 # Double Point Cross Over
 def doubleXOver(parent1, parent2, n, m):

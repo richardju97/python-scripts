@@ -4,6 +4,8 @@
 # Current implementation is specific to masterani.me
 
 import requests
+import os
+
 # Test to make sure requests is working properly
 # request = requests.get('http://www.google.com')
 
@@ -20,3 +22,8 @@ if request.status_code < 400:
 else:
 	print 'Website does not exist'
 	print request.status_code
+	
+# Logic/Pseudo Code
+# Given array with base URL, anime name, and episode # counter
+# Check every day at X time (e.g. 6am) in case it released earlier than anticipated
+# Check every hour on predicted release date (e.g. Thursdays)

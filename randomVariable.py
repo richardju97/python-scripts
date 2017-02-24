@@ -29,6 +29,7 @@ class binomial:
 		self.p = p
 		self.q = 1 - p
 
+# 	Probability Mass Function, Px(x) or P(X = x)
 	def pmf(self, x):
 		coefficient = C(self.n, x)
 		success = pow(self.p, x)
@@ -36,13 +37,13 @@ class binomial:
 		probability = coefficient * success * failure
 		return probability
 
-# E(x) = np
-def ex_bin():
-	return 0
+# 	Expected Value, E(x) = np
+	def expected():
+		return self.n * self.p
 	
-# Var(x) = npq
-def var_bin():
-	return 0
+# 	Var(x) = npq
+	def variance():
+		return self.n * self.p * self.q
 	
 # Geometric Random Variable (success)
 def geo_success():

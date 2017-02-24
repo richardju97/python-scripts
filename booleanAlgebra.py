@@ -38,3 +38,6 @@ for k in range(numRows):
 			binaryArray[m] = 0
 			
 print rowDivider
+
+# Functions to be implemented
+# Karnaugh Maps, POS and SOP expressions, converting to NAND gates only
