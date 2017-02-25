@@ -57,14 +57,12 @@ class Geometric():
 		self.p = p
 		self.q = 1 - p
 	
-	def geo_success():
-# 	q ^ (x-1) * p
-		return 0
+	def pmf_success(x):
+		return (pow(self.q, x-1), self.p)
 
 # 	Geometric Random Variable (failure)
-	def geo_failure():
-# 	q ^ x * p
-		return 0
+	def pmf_failure(x):
+		return (pow(self.q, x) * self.p)
 
 # 	E(x) = 1/p	
 	def expected():
@@ -104,7 +102,7 @@ class Poisson:
 
 	def pmf(x):
 # 		e**-l * l**x / x!, need to figure out factorial
-		return 0
+		return (exp(-l) * pow(l, x) / factorial(x))
 	
 # 	E(x) = lambda
 	def expected(self):
