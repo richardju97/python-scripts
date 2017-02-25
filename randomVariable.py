@@ -13,17 +13,15 @@ class Bernoulli:
 		self.p = p
 		self.q = 1 - p
 	
-# 	Probability mass Function, Px(x) or P(X = x)
+# 	Probability Mass Function, Px(x) or P(X = x)
 	def pmf(self):
 		return self.p
 	
-# 	Expected Value
-# 	E(x) = p
+# 	Expected Value, E(x) = p
 	def expected(self):
 		return self.p
 	
-# 	Variance
-# 	Var(x) = pq
+# 	Variance, Var(x) = pq
 	def variance(self):
 		return self.p * self.q
 
@@ -47,16 +45,18 @@ class Binomial:
 	def expected(self):
 		return self.n * self.p
 	
-# 	Var(x) = npq
+# 	Variance, Var(x) = npq
 	def variance(self):
 		return self.n * self.p * self.q
 	
-# Geometric Random Variable (success)
+# Geometric Random Variable
+# X~Geometric(p), p = probability of success
 class Geometric():
 	def __init__(self, p):
 		self.p = p
 		self.q = 1 - p
 	
+# 	Geometric Random Variable (success)
 	def pmf_success(x):
 		return (pow(self.q, x-1), self.p)
 
@@ -64,32 +64,34 @@ class Geometric():
 	def pmf_failure(x):
 		return (pow(self.q, x) * self.p)
 
-# 	E(x) = 1/p	
+# 	Expected Value, E(x) = 1/p	
 	def expected():
 		return (1/self.p)
 	
-# 	Var(x) = q/(p^2)
+# 	Variance, Var(x) = q/(p^2)
 	def variance():
 		return (self.q / pow(self.p, 2))
 
 # Negative Binomial Random Variable
+# X~NB(r, p), rth success of multiple independent trials with p = probability of success
 class NegativeBinomial:
 	def __init__(self, r, p):
 		self.r = r
 		self.p = p
 		self.q = 1 - p
 
+# 	Probability Mass Function, Px(x) or P(X = x)
 	def pmf(x):
 		coefficient = C(x-1, self.r-1)
 		success = pow(self.p, self.r)
 		failure = pow(self.q, x-self.r)
 		return coefficient * success * failure
 
-# 	E(x) = r/p
+# 	Expected Value, E(x) = r/p
 	def expected(self):
 		return r / p
 	
-# 	Var(x) = rq/(p^2)
+# 	Variance, Var(x) = rq/(p^2)
 	def variance(self):
 		return (r * q / pow(p, 2))
 
@@ -100,15 +102,16 @@ class Poisson:
 	def __init__(self, l):
 		self.l = l
 
+# 	Probability Mass Function, Px(x) or P(X = x)
 	def pmf(x):
 # 		e**-l * l**x / x!, need to figure out factorial
 		return (exp(-l) * pow(l, x) / factorial(x))
 	
-# 	E(x) = lambda
+# 	Expected Value, E(x) = lambda
 	def expected(self):
 		return self.l
 	
-# 	Var(x) = lambda
+# 	Variance, Var(x) = lambda
 	def variance(self):
 		return self.l
 
