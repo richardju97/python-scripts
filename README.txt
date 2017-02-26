@@ -16,6 +16,7 @@ Files Included in this Repository
 4. ri.py
 5. booleanAlgebra.py
 6. testJapanese.py
+7. randomVariable.py
 
 All files are left within the same directory/repository and therefore one README file.
 This is so that no matter what script is being run, you'll always cd into the same directory.
@@ -90,3 +91,13 @@ Basic Python Script related to the Japanese language.
 Intended as practice/concept testing and understanding how the Japanese language interacts with Python via Unicode encodings before pursuing a larger project in this topic.
 
 Currently can convert from dictionary form to masu form.
+
+7. randomVariable.py
+--------------------
+
+Object Oriented Python Script that allows for calculating operations on Random Variables
+Currently supports primarily discrete random variables (Bernoulli, Binomial, Geometric, Negative Binomial, and Poisson)
+Supported functions for each random variable include: Probability Mass Function, Expected Value, and Variance.
+Support for Continous Random Variables will be added in the near future. 
+
+References combination.py for calculating combinations (primarily used for Binomial and Negative Binomial Random Variables). 
