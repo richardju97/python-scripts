@@ -6,9 +6,16 @@ import math #needed for trigonometry functions
 # Gravitational Acceleration in meters per second squared
 g = 9.8
 
+# simple pulley problem off a flat surface (90 degree angle between two blocks via pulley)
+# finds the tension in the string
+slidingMass = 5.5
+fallingMass = 14
+Fgrav = fallingMass * g
+anet = Fgrav / (slidingMass + fallingMass)
+Fnet = anet * slidingMass #Fnet = Ftension = FslidingMass
+
 # Pulling a sled
 # Assume no friction
-
 mass = input("Mass of sled (kilograms): ")
 angle = input("Angle above the horizontal (degrees): ")
 pullForce = input("Force Exerted through pulling (Newtons): ")
