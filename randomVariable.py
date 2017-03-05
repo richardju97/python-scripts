@@ -4,27 +4,6 @@
 from combination import C
 from math import pow, sqrt
 
-# Thought - this might work better with lots of classes and object oriented programming rather than just functions
-
-# Bernoulli Random Variable
-# X~Bernoulli(p), p = probability of success
-class Bernoulli:
-	def __init__(self, p):
-		self.p = p
-		self.q = 1 - p
-	
-# 	Probability Mass Function, Px(x) or P(X = x)
-	def pmf(self):
-		return self.p
-	
-# 	Expected Value, E(x) = p
-	def expected(self):
-		return self.p
-	
-# 	Variance, Var(x) = pq
-	def variance(self):
-		return self.p * self.q
-
 # Binomial Random Variable
 # X~Bin(n, p), n = total number of trials, p = probability of success
 class Binomial:
@@ -48,6 +27,30 @@ class Binomial:
 # 	Variance, Var(x) = npq
 	def variance(self):
 		return self.n * self.p * self.q
+		
+# Bernoulli Random Variable
+# X~Bernoulli(p), p = probability of success
+class Bernoulli:
+	def __init__(self, p):
+		self.p = p
+		self.q = 1 - p
+	
+# 	Probability Mass Function, Px(x) or P(X = x)
+	def pmf(self):
+		return self.p
+	
+# 	Expected Value, E(x) = p
+	def expected(self):
+		return self.p
+	
+# 	Variance, Var(x) = pq
+	def variance(self):
+		return self.p * self.q
+		
+# 	Summation of n Bernoulli random variables, or a Binomial Random Variable
+	def summation(n):
+		sumOfBernoulli = Binomial(n, self.p)
+		return sumOfBernoulli
 	
 # Negative Binomial Random Variable
 # X~NB(r, p), rth success of multiple independent trials with p = probability of success
