@@ -97,7 +97,7 @@ Currently can convert from dictionary form to masu form.
 
 Object Oriented Python Script that allows for calculating operations on Random Variables
 Currently supports primarily discrete random variables (Bernoulli, Binomial, Geometric, Negative Binomial, and Poisson)
-Supported functions for each random variable include: Probability Mass Function, Expected Value, and Variance.
+Supported functions for each random variable include: Probability Mass Function, Expected Value, Variance, and Summations.
 Support for Continous Random Variables will be added in the near future. 
 
 References combination.py for calculating combinations (primarily used for Binomial and Negative Binomial Random Variables). 
