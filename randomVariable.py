@@ -4,6 +4,8 @@
 from combination import C
 from math import pow, sqrt
 
+# Discrete Random Variables
+
 # Binomial Random Variable
 # X~Bin(n, p), n = total number of trials, p = probability of success
 class Binomial:
@@ -123,3 +125,17 @@ class Poisson:
 	def variance(self):
 		return self.l
 
+# Continous Random Variables
+class Uniform():
+	def __init__(self, a, b):
+		self.a = a
+		self.b = b
+		
+	def pdf(x):
+		return ( (x - self.a) / (self.b - self.a) )
+	
+	def expected(self):
+		return ( (self.a + self.b) / 2)
+	
+# 	def variance(self):
+# 		return 
