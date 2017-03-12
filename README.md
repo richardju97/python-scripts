@@ -7,7 +7,6 @@ The goal of these scripts is to make performing various tasks more efficient
 (in comparison to doing them by hand/manually calculating them, etc.)
 
 #Files Included in this Repository
----------------------------------
 
 1. costCalculator.py
 2. goldenHour.py
@@ -22,7 +21,6 @@ This is so that no matter what script is being run, you'll always cd into the sa
 
 
 1. costCalculator.py
---------------------
 
 Originally started to help my friend calculate how much he would need to purchase "X"
 number of Boneless Wings from Buffalo Wild Wings on their 65 cent per wing deals. 
@@ -31,7 +29,6 @@ Expansion Plans:
 	1. Modify so that it's more modular so that it calculates various different costs based on user input/selection
 
 2. goldenHour.py
-----------------
 
 Originally started at the Hack the North 2016 hackathon (hosted by University of Waterloo). 
 Intended for OS X only at the moment.
@@ -62,7 +59,6 @@ Expansion Plans:
 	Alternative: Adjust to be deployed as a Chrome Extension
 
 3. cvp.py
----------
 
 Calculates the nnumber of units needed to achieve a certain target net income (either before or after taxes) using the CVP formula from Managerial Accounting.
 
@@ -76,15 +72,12 @@ Then prompts users to input the following variables where applicable:
 	Income Tax Rate
 
 4. ri.py
---------
 
 5. booleanAlgebra.py
---------------------
 
 Currently only has some basic data for printing truth tables.
 
 6. testJapanese.py
-------------------
 
 Basic Python Script related to the Japanese language. 
 Intended as practice/concept testing and understanding how the Japanese language interacts with Python via Unicode encodings before pursuing a larger project in this topic.
@@ -92,7 +85,6 @@ Intended as practice/concept testing and understanding how the Japanese language
 Currently can convert from dictionary form to masu form.
 
 7. randomVariable.py
---------------------
 
 Object Oriented Python Script that allows for calculating operations on Random Variables
 Currently supports primarily discrete random variables (Bernoulli, Binomial, Geometric, Negative Binomial, and Poisson)
