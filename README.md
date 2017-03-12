@@ -1,7 +1,6 @@
 ##Python Scripts
 
 #What is it?
------------
 
 This is a collection of various python scripts that I've written.
 The goal of these scripts is to make performing various tasks more efficient 
