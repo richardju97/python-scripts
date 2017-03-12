@@ -1,13 +1,13 @@
-Python Scripts
+##Python Scripts
 
-What is it?
+#What is it?
 -----------
 
 This is a collection of various python scripts that I've written.
 The goal of these scripts is to make performing various tasks more efficient 
 (in comparison to doing them by hand/manually calculating them, etc.)
 
-Files Included in this Repository
+#Files Included in this Repository
 ---------------------------------
 
 1. costCalculator.py
@@ -46,7 +46,7 @@ Parameters:
 	"<city, state>"
 	Example: "West Lafayette, IN"
 
-	"<Phone Number with Area Code and +1 extension"
+	"<Phone Number with Area Code and +1 extension>"
 	Example: "+18002221222"
 
 Dependencies:
