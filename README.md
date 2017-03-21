@@ -50,8 +50,9 @@ Dependencies:
 	Twilio Rest API Client
 
 To install terminal-notifier (OS X):
+```bash
 	$ sudo gem install terminal-notifier
-	
+```
 Expansion Plans:
 	1. Modify to run as a background task that repeats daily
 	2. Calculate actual "golden hour" times instead of approximating at 30 minutes
