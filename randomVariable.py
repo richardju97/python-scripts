@@ -126,7 +126,7 @@ class Poisson:
 		return self.l
 
 # Continous Random Variables
-class Uniform():
+class Uniform:
 	def __init__(self, a, b):
 		self.a = a
 		self.b = b
@@ -139,3 +139,12 @@ class Uniform():
 	
 # 	def variance(self):
 # 		return 
+
+class Exponential:
+	def __init__(self, l):
+		self.l = l
+		
+class Gamma:
+	def __init__(self, alpha, beta):
+		self.alpha = alpha
+		self.beta = beta
