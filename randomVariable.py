@@ -144,6 +144,12 @@ class Exponential:
 	def __init__(self, l):
 		self.l = l
 		
+	def expected(self):
+		return 1 / self.l
+		
+	def variance(self):
+		return 1 / pow(self.l, 2)
+		
 class Gamma:
 	def __init__(self, alpha, beta):
 		self.alpha = alpha
