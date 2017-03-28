@@ -10,11 +10,11 @@ from datetime import datetime
 # dTime = dungeonTime - datetime.now()
 # print dTime
 
-time1 = '3:30 PM'
+dungeonTime = raw_input("Time your dungeon starts (Hour:Minutes AM/PM): ")
 time2 = '2:30 PM'
 FORMAT = '%I:%M %p'
 
-dTime = datetime.strptime(time1, FORMAT) - datetime.strptime(time2, FORMAT)
+dTime = datetime.strptime(dungeonTime, FORMAT) - datetime.strptime(time2, FORMAT)
 print dTime
 # print dTime.minute
 # print dtime.hour
