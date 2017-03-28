@@ -18,4 +18,7 @@ dTime = datetime.strptime(time1, FORMAT) - datetime.strptime(time2, FORMAT)
 print dTime
 # print dTime.minute
 # print dtime.hour
-print dTime.total_seconds() / 60
+dMinutes = dTime.total_seconds() / 60
+
+regen = dMinutes / 3
+print "You will regenerate " + str(regen) + " stamina before your dungeon starts."
