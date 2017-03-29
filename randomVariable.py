@@ -154,3 +154,5 @@ class Gamma:
 	def __init__(self, alpha, beta):
 		self.alpha = alpha
 		self.beta = beta
+
+# Need to look into functions that require a table (e.g. Normal RV)
