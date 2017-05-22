@@ -4,6 +4,7 @@ import sys
 from random import randint
 
 n = int(sys.argv[1])
+matches = 0
 
 lineA = []
 lineB = []
@@ -14,6 +15,8 @@ for i in range(0, n):
 
 #0 = Tie, 1 = A wins, 2 = B wins
 def compete(idxA, idxB):
+	global matches 
+	matches += 1
 	return randint(0, 299) % 3	
 
 aSize = len(lineA)
@@ -36,7 +39,7 @@ while (aSize != 0 and bSize != 0):
 			lineA.append(lineB[0])
 			del lineB[0]
 		else:
-			lineA.append(lineB[0:j])
+			lineA.extend(lineB[0:j])
 			del lineB[0:j]
 		print "Line A: " + str(lineA)
 		print "Line B: " + str(lineB)
@@ -46,9 +49,13 @@ while (aSize != 0 and bSize != 0):
 			lineB.append(lineA[0])
 			del lineA[0]
 		else:
-			lineB.append(lineA[0:i])		
+			lineB.extend(lineA[0:i])		
 			del lineA[0:i]
 		print "Line A: " + str(lineA)
 		print "Line B: " + str(lineB)
 	aSize = len(lineA)
 	bSize = len(lineB)	
+
+print "--------------------"
+print "Game Finished!"
+print "The Game took " + str(matches) + " matches!"
