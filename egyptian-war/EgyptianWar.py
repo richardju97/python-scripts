@@ -21,3 +21,7 @@ for i in range(0, numPlayers):
 index = 0
 while (true):
     temp = input(players[index].getName() + ": ")
+    if (index == 2):
+        index = 0
+    else:
+        index += 1
