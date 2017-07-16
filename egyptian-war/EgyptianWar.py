@@ -4,6 +4,9 @@ class Player:
     def __init__(self, name):
         self.name = name
 
+    def getName(self):
+        return self.name
+
 print("Starting Egyptian War Bot:")
 numPlayers = int(input("Enter Total Number of Players: "))
 
