@@ -21,6 +21,8 @@ array = ["Rutgers",
 
 file = open("lookingforitasareps.txt", 'w')
 
-message = "Hey There! I'm Richard and this upcoming year's ITASA National Conference Liaison. I was going through the National Board Contact Sheet and couldn't seem to find UCSB's ITASA Representative's information.\nAs such, I was wondering if you could direct me to the UCSB representative. Thanks in advance!"
+for i in array:
+    message = "Hey There! I'm Richard and this upcoming year's ITASA National Conference Liaison. I was going through the National Board Contact Sheet and couldn't seem to find " + str(i) + "'s ITASA Representative's information.\n\nAs such, I was wondering if you could direct me to the " + str(i) + " representative. Thanks in advance!"
 
-file.write(message)
+    file.write(message)
+    file.write("\n\n")
