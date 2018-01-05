@@ -12,7 +12,7 @@ ipaddr = ""
 for i in range(0, len(str), 4):
 	ipaddr += str[i:i+4]
 	ipaddr += "."
-print (ipaddr)
+print (ipaddr[:len(str)+1])
 
 # IPv4 Address -> 32bit Binary String
 
