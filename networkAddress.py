@@ -7,6 +7,12 @@ import sys
 # 32bit Binary String -> IPv4 Address
 str = sys.argv[1]
 #print(str[1])
+#idx = 0
+ipaddr = ""
+for i in range(0, len(str), 4):
+	ipaddr += str[i:i+4]
+	ipaddr += "."
+print (ipaddr)
 
 # IPv4 Address -> 32bit Binary String
 
