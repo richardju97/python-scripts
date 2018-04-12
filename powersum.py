@@ -10,6 +10,7 @@ from math import factorial
 # Function for computing Combinations nCr
 
 def ncr(n, r):
-    print(factorial(n))
+    combination = factorial(n) / (factorial(n - r) * factorial(r))
+    print(combination)
 
-ncr(4, 0)
+ncr(4, 2)
