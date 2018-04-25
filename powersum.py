@@ -11,6 +11,19 @@ from math import factorial
 
 def ncr(n, r):
     combination = factorial(n) / (factorial(n - r) * factorial(r))
-    print(combination)
+    return combination
 
-ncr(4, 2)
+# Bernoulli Number
+# Function for computing Bernoulli Numbers
+
+def bernoullinum(n):
+    if (n == 0):
+        return 1
+    else:
+        sum = 0
+        for i in range (0, n):
+            sum -= ncr(n+1, i) * bernoullinum(i)
+#            print(i)
+        return 1/(n + 1) * sum
+
+print(bernoullinum(2))
