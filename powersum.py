@@ -41,4 +41,11 @@ def powersum(k, n):
     return 1/(k+1) * sum
 
 # Function Calls for Testing
-print(powersum(4, 2))
+############################
+
+# print(powersum(4, 2))
+print("Bernoulli Numbers 4 through 12:")
+for i in range(4, 13):
+    print("B" + str(i) + " : " + str(bernoullinum(i)))
+
+############################
