@@ -5,6 +5,7 @@
 # 1^k + 2^k + ... + n^k
 
 from math import factorial
+from math import pow
 
 # Combination
 # Function for computing Combinations nCr
@@ -31,8 +32,13 @@ def calcb(n):
     elif (n == 2):
         return 0.5
     else:
-        bernoullinum(n-1)
+        return bernoullinum(n-1)
 
 def powersum(k, n):
-    
+    sum = 0
+    for i in range(0, k+1):
+        sum += ncr(k+1, i) * calcb(i + 1) * (pow(n, k+1-i))
 
+    return 1/(k+1) * sum
+
+print(powersum(4, 2))
