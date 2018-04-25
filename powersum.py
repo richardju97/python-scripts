@@ -23,7 +23,16 @@ def bernoullinum(n):
         sum = 0
         for i in range (0, n):
             sum -= ncr(n+1, i) * bernoullinum(i)
-#            print(i)
         return 1/(n + 1) * sum
 
-print(bernoullinum(2))
+def calcb(n):
+    if (n == 1):
+        return 1
+    elif (n == 2):
+        return 0.5
+    else:
+        bernoullinum(n-1)
+
+def powersum(k, n):
+    
+
